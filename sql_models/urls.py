@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('dept/',dept,name='dept'),
     path('emp/',emp,name='emp'),
+    path('insert_dept/',insert_dept,name='insert_dept'),
+    path('insert_emp/',insert_emp,name='insert_emp'),
 ]
