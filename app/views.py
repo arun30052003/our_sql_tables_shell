@@ -2,14 +2,27 @@ from django.shortcuts import render
 
 # Create your views here.
 from app.models import *
+from django.db.models.functions import Length
 
 def dept(request):
     QLTO=Dept.objects.all()
+    QLTO=Dept.objects.all().order_by('deptno' and Length('dname').desc())
+    QLTO=Dept.objects.all().order_by('-deptno')
+    QLTO=Dept.objects.all().order_by(Length('deptno'))
+    QLTO=Dept.objects.all().order_by(Length('deptno').desc())
+    QLTO=Dept.objects.all().order_by('deptno')[::]
+    
     d={'Dept':QLTO}
     return render(request,'dept.html',d)
 
 def emp(request):
     QLTO=Emp.objects.all()
+    QLTO=Emp.objects.all().order_by('ename')
+    QLTO=Emp.objects.all().order_by('-ename')
+    QLTO=Emp.objects.all().order_by(Length('ename'))
+    QLTO=Emp.objects.all().order_by(Length('ename').desc())
+    QLTO=Emp.objects.all().order_by('empno')[::]
+
     d={'Emp':QLTO}
     return render(request,'emp.html',d)
 
