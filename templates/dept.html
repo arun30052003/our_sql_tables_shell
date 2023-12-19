@@ -44,12 +44,14 @@
             <h1><u>Display_Dept:-</u></h1>
             <table border="3px" cellpadding="10px" cellspacing="10px">
                 <tr>
+                    <th>PK</th>
                     <th>DEPT.NO</th>
                     <th>DNAME</th>
                     <th>LOC</th>
                 </tr>
                 {% for dt in Dept %}
                     <tr>
+                        <td>{{dt.pk}}</td>
                         <td>{{dt.deptno}}</td>
                         <td>{{dt.dname}}</td>
                         <td>{{dt.loc}}</td>

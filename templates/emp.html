@@ -44,6 +44,7 @@
             <h1><u>Display_Emp:-</u></h1>
             <table border="3px" cellpadding="10px" cellspacing="10px">
                 <tr>
+                    <th>PK</th>
                     <th>EMP.NO</th>
                     <th>DEPTNO</th>
                     <th>ENAME</th>
@@ -56,6 +57,7 @@
                 </tr>
                 {% for ep in Emp %}
                     <tr>
+                        <td>{{ep.pk}}</td>
                         <td>{{ep.empno}}</td>
                         <td>{{ep.deptno}}</td>
                         <td>{{ep.ename}}</td>
