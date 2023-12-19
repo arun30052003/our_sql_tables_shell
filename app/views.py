@@ -23,13 +23,18 @@ def emp(request):
     QLTO=Emp.objects.filter(Hiredate__month=5)
     QLTO=Emp.objects.filter(Hiredate__year=2023)
     QLTO=Emp.objects.filter(Hiredate__day=10)
+    QLTO=Emp.objects.filter(sal__lt=50000)
     QLTO=Emp.objects.filter(sal__lte=50000)
+    QLTO=Emp.objects.filter(sal__gt=50000)
+    QLTO=Emp.objects.filter(sal__gte=50000)
     QLTO=Emp.objects.filter(deptno__in=('2','3'))
     QLTO=Emp.objects.filter(pk__in=(11,))
     QLTO=Emp.objects.filter(pk__in=(11,20))
     QLTO=Emp.objects.filter(pk__in=('11','20'))
+    QLTO=Emp.objects.filter(ename__in=('Anjali',))
     QLTO=Emp.objects.filter(ename__in=('Anjali','Sumithra'))
-    QLTO=Emp.objects.filter(sal__lt=50000)
+    QLTO=Emp.objects.filter(ename__in=['Anjali'])
+    QLTO=Emp.objects.filter(ename__in=['Anjali','Sumithra'])
 
 
     d={'Emp':QLTO}
