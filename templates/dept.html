@@ -14,10 +14,10 @@
             background-color: rgb(23, 22, 22);
             color: antiquewhite;
         }
-        td:hover
+        .two:hover
         {
             cursor: pointer;
-            color: rgb(24, 101, 255);
+            color: rgb(24, 105, 255);
         }
         table:hover
         {
@@ -50,7 +50,7 @@
                     <th>LOC</th>
                 </tr>
                 {% for dt in Dept %}
-                    <tr>
+                    <tr class="two">
                         <td>{{dt.pk}}</td>
                         <td>{{dt.deptno}}</td>
                         <td>{{dt.dname}}</td>
