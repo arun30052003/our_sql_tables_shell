@@ -20,11 +20,7 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dept/',dept,name='dept'),
-    path('emp/',emp,name='emp'),
     path('insert_dept/',insert_dept,name='insert_dept'),
-    path('insert_emp/',insert_emp,name='insert_emp'),
     path('update_dept/',update_dept,name='update_dept'),
-    path('update_emp/',update_emp,name='update_emp'),
     path('delete_dept/',delete_dept,name='delete_dept'),
-    path('delete_emp/',delete_emp,name='delete_emp'),
 ]
